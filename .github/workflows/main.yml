@@ -21,5 +21,12 @@ jobs:
       - name: Run Tests
         run: pytest
 
+      - name: Install flake8
+        run: pip install flake8
+
+      - name: Run Lint Check
+        run: flake8 .
+
+
       - name: Run Script
         run: python addition.py
